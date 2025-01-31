@@ -4,6 +4,8 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Node from "./icons/Node.astro"
+import Express from "./icons/ExpressJs.astro"
 
 const TAGS = {
     NEXT: {
@@ -16,6 +18,16 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
+    Node:{
+        name: "Node.js",
+        class: "bg-black text-white",
+        icon: Node,
+    },
+    Express:{
+        name: "Express.js",
+        class: "bg-black text-white",
+        icon: Express,
+    }
 }
 const PROJECTS = [
     {
@@ -23,31 +35,36 @@ const PROJECTS = [
         description:
             "Página principal del Hotel Mandarin Cárton con un sistema de reservaciones conectado directamente a la recepción del hotel, anuncios de promociones especiales y un formulario de contacto.",
         link: "https://www.hotelmandarincarton.com.mx/",
+        github: "",
         image: "/projects/paginaHotelMandarin.webp",
-        tags: [],
+        tags: [TAGS.Node],
     },
     {
         title: "Menu restaurante Madrid.",
         description:
             "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
         link: "https://servicioshoteleroshmc.hotelmandarincarton.com.mx/menu/mandarin/section1",
+        github:"",
         image: "/projects/MenuMadrid.webp",
-        //tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.HTML,TAGS.JavaScript],
-        tags: [],
+        tags: [TAGS.Node, TAGS.Express],
     },
     {
         title: "Sistema de gestión de eventos",
         description:
             "Sistema para la gestión de eventos entre diversos equipos y sus respectivos responsables, coordinado por el encargado de ventas, quien se encarga de comunicar las exigencias y requisitos establecidos por el cliente para la realización de su evento.",
+        link: "",
+        github: "",
         image:"/projects/SistemaEventos.webp",
-        tags: []
+        tags: [TAGS.Node, TAGS.Express],
     },
     {
         title: "Sistema de gestión de finanzas",
         description:
-        "Sistema de Gestión de Gastos que permite registrar de manera manual los gastos y compras realizadas, almacenando dichos registros en una base de datos. Además, facilita la generación e impresión de balances, reportes detallados y la aplicación de filtros por tipo de transacción, fecha y monto, brindando un control eficiente y organizado de las operaciones financieras.",
+            "Sistema de Gestión de Gastos que permite registrar de manera manual los gastos y compras realizadas, almacenando dichos registros en una base de datos. Además, facilita la generación e impresión de balances, reportes detallados y la aplicación de filtros por tipo de transacción, fecha y monto, brindando un control eficiente y organizado de las operaciones financieras.",
+        link: "",
+        github: "",
         image: "/projects/SistemaGestionFinanzas.webp",
-        tags: []
+        tags: [TAGS.Node, TAGS.Express],
     }
 ]
 ---
@@ -58,7 +75,7 @@ const PROJECTS = [
                 <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
                     <div class="w-full md:w-1/2">
                         <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                            <img alt="Imagen de proyecto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+                            <img alt="Imagen de poroyecto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
                         </div>
                     </div>
 
@@ -102,6 +119,3 @@ const PROJECTS = [
         ))
     }
 </div>
-
-
-
