@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Septiembre 2024-Enero 2025",
+    title: "Estancias profesionales",
+    company: "Hotel Mandarin Cárton",
+    description:
+      "Durante mi estancia en el Hotel Mandarin Cárton, desarrollé diversos proyectos que optimizaron procesos internos y mejoraron la experiencia de clientes y empleados. Entre ellos, la creación de la página web principal del hotel, un sistema dinámico de menús que se ajusta según horarios y disponibilidad de inventario, una herramienta para la gestión y coordinación de personal en eventos, y un sistema financiero enfocado en las comandas del restaurante, con miras a integrar los gastos e ingresos en el futuro.",
+    link: "https://www.hotelmandarincarton.com.mx/",
+  },
+  {
+    date: "Septiembre 2023-Septiembre 2024",
+    title: "Practicante Universitario",
+    company: "The Truck Savers",
+    description:
+      "Durante mi participación en el programa dual, trabajé en el desarrollo de una aplicación móvil para la gestión de citas en un taller de transporte pesado. La aplicación consumía datos de una API desarrollada en paralelo por un equipo independiente, asegurando la integración eficiente entre ambas plataformas.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
